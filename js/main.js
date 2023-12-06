@@ -1,7 +1,17 @@
-console.log("this is a text");
+const currentUrl = window.location.href;
+const parsedUrl = new URL(currentUrl);
 
-let var1 = "hhhh";
-console.log(var1);
+const protocol = parsedUrl.protocol;
+const hostname = parsedUrl.hostname;
+const path = parsedUrl.pathname;
 
-let var2 = "hhhh";
-console.log(var2);
+console.log(parsedUrl);
+
+window.localStorage.setItem("URL", parsedUrl);
+
+// window.location.href = "home";
+console.log(protocol, hostname, path);
+console.log(protocol);
+console.log(hostname);
+console.log(path);
+
